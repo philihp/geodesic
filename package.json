@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "20.6.0",
@@ -18,5 +19,76 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@philihp/eslint-config": "6.1.0",
+    "@philihp/prettier-config": "1.0.0",
+    "@tsconfig/node20": "20.1.2",
+    "@typescript-eslint/eslint-plugin": "6.6.0",
+    "@typescript-eslint/parser": "6.6.0",
+    "eslint-import-resolver-typescript": "3.6.0",
+    "eslint-plugin-import": "2.28.1",
+    "eslint-plugin-prettier": "5.0.0",
+    "husky": "8.0.3",
+    "lint-staged": "14.0.1",
+    "prettier": "3.0.3"
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "eslint --ext .ts,.tsx --fix"
+    ]
+  },
+  "prettier": "@philihp/prettier-config",
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "@philihp"
+    ],
+    "settings": {
+      "react": {
+        "version": "9999"
+      },
+      "import/extensions": [
+        ".ts"
+      ],
+      "import/parsers": {
+        "@typescript-eslint/parser": [
+          ".ts"
+        ]
+      },
+      "import/resolver": {
+        "typescript": {},
+        "node": {
+          "extensions": [
+            ".ts"
+          ]
+        }
+      }
+    },
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "off",
+      "class-methods-use-this": "off",
+      "default-case": "off",
+      "no-param-reassign": "off",
+      "no-restricted-syntax": "off",
+      "no-unused-vars": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*"
+        ],
+        "rules": {
+          "@typescript-eslint/no-non-null-assertion": "off"
+        }
+      }
+    ]
   }
 }
