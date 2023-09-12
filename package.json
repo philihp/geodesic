@@ -10,11 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@types/node": "20.6.0",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
-    "eslint": "8.49.0",
-    "eslint-config-next": "13.4.19",
+    "@react-three/fiber": "8.14.1",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -24,19 +20,19 @@
     "@philihp/eslint-config": "6.1.0",
     "@philihp/prettier-config": "1.0.0",
     "@tsconfig/node20": "20.1.2",
+    "@types/node": "20.6.0",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "6.6.0",
     "@typescript-eslint/parser": "6.6.0",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.19",
     "eslint-import-resolver-typescript": "3.6.0",
     "eslint-plugin-import": "2.28.1",
     "eslint-plugin-prettier": "5.0.0",
     "husky": "8.0.3",
     "lint-staged": "14.0.1",
     "prettier": "3.0.3"
-  },
-  "lint-staged": {
-    "**/*.ts": [
-      "eslint --ext .ts,.tsx --fix"
-    ]
   },
   "prettier": "@philihp/prettier-config",
   "eslintConfig": {
@@ -48,6 +44,8 @@
       "@typescript-eslint"
     ],
     "extends": [
+      "next",
+      "prettier",
       "plugin:@typescript-eslint/recommended",
       "@philihp"
     ],
@@ -56,18 +54,21 @@
         "version": "9999"
       },
       "import/extensions": [
-        ".ts"
+        ".ts",
+        ".tsx"
       ],
       "import/parsers": {
         "@typescript-eslint/parser": [
-          ".ts"
+          ".ts",
+          ".tsx"
         ]
       },
       "import/resolver": {
         "typescript": {},
         "node": {
           "extensions": [
-            ".ts"
+            ".ts",
+            ".tsx"
           ]
         }
       }
