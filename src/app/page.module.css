@@ -1,16 +1,16 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   min-height: 100vh;
-}
-
-.scene {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   width: 100vw;
   height: 100vh;
+  color: rgb(229, 229, 255);
+  padding: 20px;
+}
+
+.node {
+  stroke-width: 0.1;
+}
+
+.edge {
+  stroke-width: 0.002;
+  stroke-linecap: round;
 }

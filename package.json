@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-three/fiber": "8.14.1",
     "next": "13.4.19",
+    "ramda": "0.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.2.2"
@@ -21,6 +22,7 @@
     "@philihp/prettier-config": "1.0.0",
     "@tsconfig/node20": "20.1.2",
     "@types/node": "20.6.0",
+    "@types/ramda": "0.29.4",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "6.6.0",

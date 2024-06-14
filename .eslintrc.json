@@ -6,9 +6,6 @@
   "plugins": ["@typescript-eslint"],
   "extends": ["next", "prettier", "plugin:@next/next/recommended", "plugin:@typescript-eslint/recommended", "@philihp"],
   "settings": {
-    "react": {
-      "version": "9999"
-    },
     "import/extensions": [".ts", ".tsx"],
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
@@ -21,19 +18,31 @@
     }
   },
   "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "class-methods-use-this": "off",
     "default-case": "off",
     "no-param-reassign": "off",
     "no-restricted-syntax": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "react/no-unknown-property": [0],
+
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   },
   "overrides": [
     {
       "files": ["**/__tests__/*"],
-      "rules": {
-        "@typescript-eslint/no-non-null-assertion": "off"
-      }
+      "rules": {}
     }
   ]
 }
