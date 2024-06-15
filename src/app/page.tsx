@@ -134,7 +134,7 @@ const edgeAt = ([a, b]: [point, point]) => {
   if (a[0] + b[0] <= -0.1) return null
   const path = `M ${ax} ${ay} L ${bx} ${by}`
   const opacity = avgZ / 4 + 0.75
-  return <path key={`${path} ${opacity}`} d={path} className={styles.edge} stroke="pink" />
+  return <path key={`${path} ${opacity}`} d={path} className={styles.edge} stroke="black" />
 }
 
 const faceAt = ([a, b, c]: [point, point, point]) => {
