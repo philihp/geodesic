@@ -199,10 +199,7 @@ const displayed = withoutPoints
 
 const Home = () => (
   <>
-    <svg
-      viewBox={`${-1 * SCALE} ${-1 * SCALE} ${2 * SCALE} ${2 * SCALE}`} /* min-x min-y width height */
-      preserveAspectRatio="xMidYMid meet">
-      {/*map<[point, point, point], React.JSX.Element | null>(faceAt, faces)*/}
+    <svg viewBox={`${-1 * SCALE} ${-1 * SCALE} ${2 * SCALE} ${2 * SCALE}`} preserveAspectRatio="xMidYMid meet">
       {map(
         ([a, b, c]) => (
           <>
