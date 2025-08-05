@@ -10,7 +10,11 @@
   stroke-width: 0.1;
 }
 
+.nodeLabel {
+  font-size: 0.0013em;
+}
+
 .edge {
-  stroke-width: 0.002;
+  stroke-width: 0.001;
   stroke-linecap: round;
 }
