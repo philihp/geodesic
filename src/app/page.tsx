@@ -367,7 +367,6 @@ const SVG_PADDING = 0.02
 
 const Home = () => (
   <>
-    {/*
     <svg
       viewBox={`
         ${-1 * SCALE - SVG_PADDING}
@@ -388,7 +387,6 @@ const Home = () => (
       )}
       {addIndex(map<point, React.JSX.Element>)(pointAt, n4)}
     </svg>
-    { */}
     <pre>
       {JSON.stringify(
         {
